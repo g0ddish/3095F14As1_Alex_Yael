@@ -6,7 +6,6 @@
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,7 +14,6 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Not-A
  */
-@WebServlet(urlPatterns = {"/ShoppingCart"})
 public class ShoppingCart extends HttpServlet {
 
     /**
@@ -35,10 +33,17 @@ public class ShoppingCart extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
+            out.println("<link rel='stylesheet' type='text/css' href='./css/bootstrap.css'>");
             out.println("<title>Servlet ShoppingCart</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ShoppingCart at " + request.getContextPath() + "</h1>");
+            out.println("<div class='panel'><h1>Servlet ShoppingCart at " + request.getContextPath() + "</h1></div>");
+            out.println("<div class=\"panel panel-primary\"> <div class=\"panel-heading\">\n" +
+"    <h3 class=\"panel-title\">Panel title</h3>\n" +
+"  </div>\n" +
+"  <div class=\"panel-body\">\n" +
+"    Panel content\n" +
+"  </div></div>");
             out.println("</body>");
             out.println("</html>");
         }

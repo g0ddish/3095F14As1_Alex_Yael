@@ -6,7 +6,6 @@
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,7 +14,6 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Not-A
  */
-@WebServlet(urlPatterns = {"/Checkout"})
 public class Checkout extends HttpServlet {
 
     /**
@@ -35,6 +33,7 @@ public class Checkout extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
+            out.println("<link rel='stylesheet' type='text/css' href='./css/bootstrap.css'>");
             out.println("<title>Servlet Checkout</title>");            
             out.println("</head>");
             out.println("<body>");
