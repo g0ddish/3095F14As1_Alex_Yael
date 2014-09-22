@@ -29,10 +29,12 @@ public class ShoppingCart extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+            Layout layout = new Layout();
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
+            out.println(layout.navBar());
             out.println("<link rel='stylesheet' type='text/css' href='./css/bootstrap.css'>");
             out.println("<title>Servlet ShoppingCart</title>");            
             out.println("</head>");
