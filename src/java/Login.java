@@ -38,27 +38,27 @@ public class Login extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet Login at " + request.getContextPath() + "</h1>"
-                    + "<form role=\"form\">\n" +
-"  <div class=\"form-group\">\n" +
-"    <label for=\"exampleInputEmail1\">Email address</label>\n" +
-"    <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" placeholder=\"Enter email\">\n" +
-"  </div>\n" +
-"  <div class=\"form-group\">\n" +
-"    <label for=\"exampleInputPassword1\">Password</label>\n" +
-"    <input type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\" placeholder=\"Password\">\n" +
-"  </div>\n" +
-"  <div class=\"form-group\">\n" +
-"    <label for=\"exampleInputFile\">File input</label>\n" +
-"    <input type=\"file\" id=\"exampleInputFile\">\n" +
-"    <p class=\"help-block\">Example block-level help text here.</p>\n" +
-"  </div>\n" +
-"  <div class=\"checkbox\">\n" +
-"    <label>\n" +
-"      <input type=\"checkbox\"> Check me out\n" +
-"    </label>\n" +
-"  </div>\n" +
-"  <button type=\"submit\" class=\"btn btn-default\">Submit</button>\n" +
-"</form>");
+                    + "<div class=\"col-md-4\"><form role=\"form\">\n" +
+                    "  <div class=\"form-group\">\n" +
+                    "    <label for=\"exampleInputEmail1\">Email address</label>\n" +
+                    "    <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" placeholder=\"Enter email\">\n" +
+                    "  </div>\n" +
+                    "  <div class=\"form-group\">\n" +
+                    "    <label for=\"exampleInputPassword1\">Password</label>\n" +
+                    "    <input type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\" placeholder=\"Password\">\n" +
+                    "  </div>\n" +
+                    "  <div class=\"form-group\">\n" +
+                    "    <label for=\"exampleInputFile\">File input</label>\n" +
+                    "    <input type=\"file\" id=\"exampleInputFile\">\n" +
+                    "    <p class=\"help-block\">Example block-level help text here.</p>\n" +
+                    "  </div>\n" +
+                    "  <div class=\"checkbox\">\n" +
+                    "    <label>\n" +
+                    "      <input type=\"checkbox\"> Check me out\n" +
+                    "    </label>\n" +
+                    "  </div>\n" +
+                    "  <button type=\"submit\" class=\"btn btn-default\">Submit</button>\n" +
+                    "</form></div>");
             out.println("</body>");
             out.println("</html>");
         }
