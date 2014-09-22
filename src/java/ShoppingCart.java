@@ -31,23 +31,18 @@ public class ShoppingCart extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             Layout layout = new Layout();
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
+            out.println(layout.header());
             out.println(layout.navBar());
-            out.println("<link rel='stylesheet' type='text/css' href='./css/bootstrap.css'>");
-            out.println("<title>Servlet ShoppingCart</title>");            
-            out.println("</head>");
-            out.println("<body>");
+            out.println(layout.containerOpen());
             out.println("<div class='panel'><h1>Servlet ShoppingCart at " + request.getContextPath() + "</h1></div>");
             out.println("<div class=\"panel panel-primary\"> <div class=\"panel-heading\">\n" +
-"    <h3 class=\"panel-title\">Panel title</h3>\n" +
-"  </div>\n" +
-"  <div class=\"panel-body\">\n" +
-"    Panel content\n" +
-"  </div></div>");
-            out.println("</body>");
-            out.println("</html>");
+            "    <h3 class=\"panel-title\">Panel title</h3>\n" +
+            "  </div>\n" +
+            "  <div class=\"panel-body\">\n" +
+            "    Panel content\n" +
+            "  </div></div>");
+            out.println(layout.containerClose());
+            out.println(layout.footer());
         }
     }
 

@@ -9,6 +9,23 @@
  */
 public class Layout {
     
+    public String header(){
+    return "<!DOCTYPE html>"+"<html>"+"<head>"+"<link rel='stylesheet' type='text/css' href='./css/bootstrap.css'>"+
+            "<title>Servlet ShoppingCart</title>"        
+            +"</head><body>";
+    }
+    
+    public String footer(){
+        return "</body></html>";
+    }
+    public String containerOpen(){
+    return "<div class='container' style='margin-top:30px;'>";
+    }
+    
+    public String containerClose(){
+    return "</div>";
+    }
+    
     public String navBar(){
         return "<nav class=\"navbar navbar-default navbar-fixed-top\" role=\"navigation\">\n" +
 "  <div class=\"container\">\n" +
