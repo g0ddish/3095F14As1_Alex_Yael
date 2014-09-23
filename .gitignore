@@ -35,7 +35,7 @@ Icon
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
-nbproject/
+nbproject/**
 # Directories potentially created on remote AFP share
 .AppleDB
 .AppleDesktop
@@ -44,3 +44,5 @@ Temporary Items
 .apdisk
 /build/
 /dist/
+nbproject/private/private.properties
+nbproject/project.properties
