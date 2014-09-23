@@ -19,7 +19,7 @@ public class Layout {
         return "</body></html>";
     }
     public String containerOpen(){
-    return "<div class='container' style='margin-top:30px;'>";
+    return "<div class='container' style='margin-top:50px;'>";
     }
     
     public String containerClose(){
