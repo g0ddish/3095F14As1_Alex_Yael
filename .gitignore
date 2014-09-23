@@ -4,10 +4,7 @@ ehthumbs.db
 
 nbproject/private/
 nbbuild/
-dist/
-nbdist/
-nbactions.xml
-nb-configuration.xml
+
 
 # Folder config file
 Desktop.ini
