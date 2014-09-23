@@ -38,6 +38,11 @@ public class Catalogue extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet Catalogue at " + request.getContextPath() + "</h1>");
+            out.println("<div class=\"well-sm\"><a href=\"./Login\">Login</a></div>\n" +
+    "        <div class=\"well-sm\"><a href=\"./Registration\">Registration</a></div>\n" +
+    "        <div class=\"well-sm\"><a href=\"./Checkout\">Checkout</a></div>\n" +
+    "        <div class=\"well-sm\"><a href=\"./ShoppingCart\">Shopping Cart</a></div>"
+         );
             out.println("</body>");
             out.println("</html>");
         }
