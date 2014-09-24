@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Not-A
  */
-public class Login extends HttpServlet {
+public class Index extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -29,24 +29,14 @@ public class Login extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-       Layout layout = new Layout();
             /* TODO output your page here. You may use following sample code. */
-            out.println(layout.header("Login"));
+            Layout layout = new Layout();
+            /* TODO output your page here. You may use following sample code. */
+            out.println(layout.header("Index"));
             out.println(layout.navBar());
             out.println(layout.containerOpen());
-            out.println("<h1>Servlet Login at " + request.getContextPath() + "</h1>"
-                    + "<div class=\"col-md-4\"><form method=\"post\" action=\"Login\" role=\"form\">\n" +
-                    "  <div class=\"form-group\">\n" +
-                    "    <label for=\"username\">Username</label>\n" +
-                    "    <input type=\"text\" class=\"form-control\" id=\"username\" name=\"username\" placeholder=\"Enter email\">\n" +
-                    "  </div>\n" +
-                    "  <div class=\"form-group\">\n" +
-                    "    <label for=\"password\">Password</label>\n" +
-                    "    <input type=\"password\" class=\"form-control\" id=\"password\" name=\"password\" placeholder=\"Password\">\n" +
-                    "  </div>\n" +
-                    "  <button type=\"submit\" class=\"btn btn-default\">Submit</button>\n" +
-                    "</form></div>");
-            out.println(layout.containerClose());
+            out.println("<h1>Servlet Index at " + request.getContextPath() + "</h1>");
+           out.println(layout.containerClose());
             out.println(layout.footer());
         }
     }

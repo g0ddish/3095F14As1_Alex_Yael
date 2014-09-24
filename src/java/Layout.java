@@ -9,9 +9,9 @@
  */
 public class Layout {
     
-    public String header(){
+    public String header(String title){
     return "<!DOCTYPE html>"+"<html>"+"<head>"+"<link rel='stylesheet' type='text/css' href='./css/bootstrap.css'>"+
-            "<title>Servlet ShoppingCart</title>"        
+            "<title>" + title + "</title>"        
             +"</head><body>";
     }
     

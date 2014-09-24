@@ -31,7 +31,7 @@ public class ShoppingCart extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             Layout layout = new Layout();
             /* TODO output your page here. You may use following sample code. */
-            out.println(layout.header());
+            out.println(layout.header("Shopping Cart"));
             out.println(layout.navBar());
             out.println(layout.containerOpen());
             out.println("<div class='panel'><h1>Servlet ShoppingCart at " + request.getContextPath() + "</h1></div>");
