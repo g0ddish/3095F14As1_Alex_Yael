@@ -10,7 +10,7 @@
 public class Layout {
     
     public String header(String title){
-    return "<!DOCTYPE html>"+"<html>"+"<head>"+"<link rel='stylesheet' type='text/css' href='./css/bootstrap.css'>"+
+    return "<!DOCTYPE html>"+"<html>"+"<head>"+"<link rel='stylesheet' type='text/css' href='./css/bootstrap.css'><script type=\"text/javascript\" src=\"//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js\"></script><script src=\"./js/bootstrap.js\"></script>"+
             "<title>" + title + "</title>"        
             +"</head><body>";
     }

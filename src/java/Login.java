@@ -38,7 +38,7 @@ public class Login extends HttpServlet {
                     + "<div class=\"col-md-4\"><form method=\"post\" action=\"Login\" role=\"form\">\n" +
                     "  <div class=\"form-group\">\n" +
                     "    <label for=\"username\">Username</label>\n" +
-                    "    <input type=\"text\" class=\"form-control\" id=\"username\" name=\"username\" placeholder=\"Enter email\">\n" +
+                    "    <input type=\"text\" class=\"form-control\" id=\"username\" name=\"username\" placeholder=\"Enter Username\">\n" +
                     "  </div>\n" +
                     "  <div class=\"form-group\">\n" +
                     "    <label for=\"password\">Password</label>\n" +
