@@ -43,8 +43,8 @@ public class Layout {
 "    <!-- Collect the nav links, forms, and other content for toggling -->\n" +
 "    <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n" +
 "      <ul class=\"nav navbar-nav\">\n" +
-"        <li class=\"active\"><a href=\"#\">Link</a></li>\n" +
-"        <li><a href=\"#\">Link</a></li>\n" +
+"           <li class=\"active\"><a href=\"./Catalogue\">Catalogue</a></li>\n" +
+
 "        <li class=\"dropdown\">\n" +
 "          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Dropdown <span class=\"caret\"></span></a>\n" +
 "          <ul class=\"dropdown-menu\" role=\"menu\">\n" +
@@ -58,25 +58,11 @@ public class Layout {
 "          </ul>\n" +
 "        </li>\n" +
 "      </ul>\n" +
-"      <form class=\"navbar-form navbar-left\" role=\"search\">\n" +
-"        <div class=\"form-group\">\n" +
-"          <input type=\"text\" class=\"form-control\" placeholder=\"Search\">\n" +
-"        </div>\n" +
-"        <button type=\"submit\" class=\"btn btn-default\">Submit</button>\n" +
-"      </form>\n" +
 "      <ul class=\"nav navbar-nav navbar-right\">\n" +
-"        <li><a href=\"#\">Link</a></li>\n" +
-"        <li class=\"dropdown\">\n" +
-"          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Dropdown <span class=\"caret\"></span></a>\n" +
-"          <ul class=\"dropdown-menu\" role=\"menu\">\n" +
-"            <li><a href=\"#\">Action</a></li>\n" +
-"            <li><a href=\"#\">Another action</a></li>\n" +
-"            <li><a href=\"#\">Something else here</a></li>\n" +
-"            <li class=\"divider\"></li>\n" +
-"            <li><a href=\"#\">Separated link</a></li>\n" +
-"          </ul>\n" +
-"        </li>\n" +
-"      </ul>\n" +
+"        <li><a href=\"./Login\">Login</a></li>\n" +
+"        <li><a href=\"./Registration\">Register</a></li>\n" +
+"        \n" +
+"      </ul>"+
 "    </div>"+
 "  </div>\n" +
 "</nav>";      
