@@ -6,6 +6,7 @@
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -36,8 +37,8 @@ public class Login extends HttpServlet {
             out.println(layout.containerOpen());
                    out.println("<br /><div class=\"container-fluid\"> <h4>Welcome to SolutionBlender Shopping.\n"
                     + "Please enter your e-mail and password to "
-                    + "login. <br /> If you do not have an account with us, please register <a href=\"./Registration\">here</a>.</h4></div>"+ "<div class=\"col-md-4\"><form method=\"post\" action=\"Login\" role=\"form\">\n" +
-                    "  <div class=\"form-group\">\n" +
+                    + "login. <br /> If you do not have an account with us, please register <a href=\"./Registration\">here</a>.</h4></div>"+ "<div class=\"col-md-4\"><form method=\"post\" action=\"welcome\" role=\"form\">\n" +
+                    "  <div class=\"form-group\">\n" + 
                     "    <label for=\"username\">Username</label>\n" +
                     "    <input type=\"text\" class=\"form-control\" id=\"username\" name=\"username\" placeholder=\"Enter Username\">\n" +
                     "  </div>\n" +

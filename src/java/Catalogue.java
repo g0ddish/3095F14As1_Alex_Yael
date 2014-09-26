@@ -6,6 +6,7 @@
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Not-A
  */
+@WebServlet("/welcome")
 public class Catalogue extends HttpServlet {
 
     /**
@@ -30,21 +32,24 @@ public class Catalogue extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<link rel='stylesheet' type='text/css' href='./css/bootstrap.css'>");
-            out.println("<title>Servlet Catalogue</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Catalogue at " + request.getContextPath() + "</h1>");
-            out.println("<div class=\"well-sm\"><a href=\"./Login\">Login</a></div>\n" +
-    "        <div class=\"well-sm\"><a href=\"./Registration\">Registration</a></div>\n" +
-    "        <div class=\"well-sm\"><a href=\"./Checkout\">Checkout</a></div>\n" +
-    "        <div class=\"well-sm\"><a href=\"./ShoppingCart\">Shopping Cart</a></div>"
-         );
-            out.println("</body>");
-            out.println("</html>");
+            Layout layout = new Layout();
+            /* TODO output your page here. You may use following sample code. */
+            out.println(layout.header("Index"));
+            out.println(layout.navBar());
+            out.println(layout.containerOpen());
+            out.println("<br /><br />"+
+                    "<div class=\"panel panel-primary\"><h4>&nbsp; You've logged into SolutionBlender!"
+                    + " Please browse our items.</h4></div><br/>"+
+                    
+                "<ul>\n" +
+                "  <li><b>First Name</b>: "
+                + request.getParameter("username") + "\n" +
+                "  <li><b>Last Name</b>: "
+                + request.getParameter("password") + "\n" +
+                "</ul>\n" );
+            
+            out.println(layout.containerClose());
+            out.println(layout.footer());
         }
     }
 

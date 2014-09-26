@@ -12,6 +12,10 @@
         <servlet-name>Login</servlet-name>
         <servlet-class>Login</servlet-class>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>Catalogue</servlet-name>
+        <url-pattern>/welcome</url-pattern>
+    </servlet-mapping>
     <servlet>
         <servlet-name>Registration</servlet-name>
         <servlet-class>Registration</servlet-class>
@@ -24,10 +28,13 @@
         <servlet-name>Index</servlet-name>
         <servlet-class>Index</servlet-class>
     </servlet>
+    
     <servlet-mapping>
         <servlet-name>Catalogue</servlet-name>
         <url-pattern>/Catalogue</url-pattern>
     </servlet-mapping>
+   
+    
     <servlet-mapping>
         <servlet-name>Checkout</servlet-name>
         <url-pattern>/Checkout</url-pattern>
@@ -48,6 +55,7 @@
         <servlet-name>Index</servlet-name>
         <url-pattern>/Index</url-pattern>
     </servlet-mapping>
+    
     <session-config>
         <session-timeout>
             30
