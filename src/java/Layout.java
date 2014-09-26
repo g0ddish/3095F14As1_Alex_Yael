@@ -16,7 +16,13 @@ public class Layout {
     }
     
     public String footer(){
-        return "</body></html>";
+        return "</body><br /><div class=\"wrapper\">\n" +
+
+"  <div class=\"push\"></div>\n" +
+" </div>\n" +
+" <div class=\"panel-footer\">\n" +
+"   <p>Copyright (c) 2014</p>\n" +
+" </div></html>";
     }
     public String containerOpen(){
     return "<div class='container' style='margin-top:30px;'>";

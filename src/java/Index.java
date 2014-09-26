@@ -35,7 +35,11 @@ public class Index extends HttpServlet {
             out.println(layout.header("Index"));
             out.println(layout.navBar());
             out.println(layout.containerOpen());
-            //out.println("<h1>Servlet Index at " + request.getContextPath() + "</h1>");
+            out.println("<br /><br />"+
+                    "<div class=\"panel panel-primary\"><h4>&nbsp; Welcome to SolutionBlender Shopping!"
+                    + " We sell computer parts.</h4></div><br/>"
+                    + " <div class=\"container\"><img src=\"./css/computer.jpg\" "
+                    + "alt=\"computer\" style=\"width:804px;height:500px\"></div>");
             out.println(layout.containerClose());
             out.println(layout.footer());
         }
