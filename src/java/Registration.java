@@ -25,21 +25,31 @@ public class Registration extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+        protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+       Layout layout = new Layout();
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<link rel='stylesheet' type='text/css' href='./css/bootstrap.css'>");
-            out.println("<title>Servlet Registration</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Registration at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            out.println(layout.header("Login"));
+            out.println(layout.navBar());
+            out.println(layout.containerOpen());
+            
+            out.println("<br /><div class=\"container-fluid\"> <h4>Welcome to SolutionBlender Shopping.\n"
+                    + "Please enter your e-mail and password to register "
+                    + "for an account.</h4></div>"+ "<div class=\"col-md-4\"><form method=\"post\" action=\"Login\" role=\"form\">\n" +
+                    "  <div class=\"form-group\">\n" +
+                    "    <label for=\"username\">Username</label>\n" +
+                    "    <input type=\"text\" class=\"form-control\" id=\"username\" name=\"username\" placeholder=\"Enter Username\">\n" +
+                    "  </div>\n" +
+                    "  <div class=\"form-group\">\n" +
+                    "    <label for=\"password\">Password</label>\n" +
+                    "    <input type=\"password\" class=\"form-control\" id=\"password\" name=\"password\" placeholder=\"Password\">\n" +
+                    "  </div>\n" +
+                    "  <button type=\"submit\" class=\"btn btn-default\">Submit</button>\n" +
+                    "</form></div>");
+            out.println(layout.containerClose());
+            out.println(layout.footer());
         }
     }
 

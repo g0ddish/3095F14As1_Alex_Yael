@@ -37,7 +37,7 @@ public class Layout {
 "        <span class=\"icon-bar\"></span>\n" +
 "        <span class=\"icon-bar\"></span>\n" +
 "      </button>\n" +
-"      <a class=\"navbar-brand\" href=\"#\">Brand</a>\n" +
+"      <a class=\"navbar-brand\" href=\"./Index\">SolutionBlender Shopping</a>\n" +
 "    </div>\n" +
 "\n" +
 "    <!-- Collect the nav links, forms, and other content for toggling -->\n" +
@@ -45,18 +45,7 @@ public class Layout {
 "      <ul class=\"nav navbar-nav\">\n" +
 "           <li class=\"active\"><a href=\"./Catalogue\">Catalogue</a></li>\n" +
 
-"        <li class=\"dropdown\">\n" +
-"          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Dropdown <span class=\"caret\"></span></a>\n" +
-"          <ul class=\"dropdown-menu\" role=\"menu\">\n" +
-"            <li><a href=\"#\">Action</a></li>\n" +
-"            <li><a href=\"#\">Another action</a></li>\n" +
-"            <li><a href=\"#\">Something else here</a></li>\n" +
-"            <li class=\"divider\"></li>\n" +
-"            <li><a href=\"#\">Separated link</a></li>\n" +
-"            <li class=\"divider\"></li>\n" +
-"            <li><a href=\"#\">One more separated link</a></li>\n" +
-"          </ul>\n" +
-"        </li>\n" +
+
 "      </ul>\n" +
 "      <ul class=\"nav navbar-nav navbar-right\">\n" +
 "        <li><a href=\"./Login\">Login</a></li>\n" +

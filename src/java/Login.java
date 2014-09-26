@@ -34,8 +34,9 @@ public class Login extends HttpServlet {
             out.println(layout.header("Login"));
             out.println(layout.navBar());
             out.println(layout.containerOpen());
-            out.println("<h1>Servlet Login at " + request.getContextPath() + "</h1>"
-                    + "<div class=\"col-md-4\"><form method=\"post\" action=\"Login\" role=\"form\">\n" +
+                   out.println("<br /><div class=\"container-fluid\"> <h4>Welcome to SolutionBlender Shopping.\n"
+                    + "Please enter your e-mail and password to "
+                    + "login. <br /> If you do not have an account with us, please register <a href=\"./Registration\">here</a>.</h4></div>"+ "<div class=\"col-md-4\"><form method=\"post\" action=\"Login\" role=\"form\">\n" +
                     "  <div class=\"form-group\">\n" +
                     "    <label for=\"username\">Username</label>\n" +
                     "    <input type=\"text\" class=\"form-control\" id=\"username\" name=\"username\" placeholder=\"Enter Username\">\n" +
