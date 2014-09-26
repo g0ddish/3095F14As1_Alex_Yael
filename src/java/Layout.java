@@ -43,7 +43,7 @@ public class Layout {
 "        <span class=\"icon-bar\"></span>\n" +
 "        <span class=\"icon-bar\"></span>\n" +
 "      </button>\n" +
-"      <a class=\"navbar-brand\" href=\"./Index\">SolutionBlender Shopping</a>\n" +
+"      <a class=\"navbar-brand\" href=\"./Index\"><b>SolutionBlender Shopping</b></a>\n" +
 "    </div>\n" +
 "\n" +
 "    <!-- Collect the nav links, forms, and other content for toggling -->\n" +
