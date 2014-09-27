@@ -18,7 +18,7 @@ public class Layout {
     public String footer(){
         return "<nav class=\"navbar navbar-default navbar-fixed-bottom\" role=\"navigation\">\n" +
 "  <div class=\"container\">\n" +
-"    ...\n" +
+"    SolutionBlender Shopping (C) 2014\n" +
 "  </div>\n" +
 "</nav></body>></html>";
     }

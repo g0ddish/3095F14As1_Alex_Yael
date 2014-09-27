@@ -12,9 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Not-A
+ * @author Yael
  */
-public class Registration extends HttpServlet {
+public class RegistrationPreview extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -25,43 +25,35 @@ public class Registration extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-        protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        Layout layout = new Layout();
         try (PrintWriter out = response.getWriter()) {
-       Layout layout = new Layout();
             /* TODO output your page here. You may use following sample code. */
+            
             out.println(layout.header("Login"));
             out.println(layout.navBar());
             out.println(layout.containerOpen());
             
-            out.println("<br /><div class=\"container-fluid\"> <h4>Welcome to SolutionBlender Shopping.\n"
-                    + "Please enter your e-mail and password to register "
-                    + "for an account.</h4></div>"+ "<div class=\"col-md-4\">"
-                    + "<form method=\"post\" action=\"RegistrationPreview\" role=\"form\">\n" +
-                     "  <div class=\"form-group\">\n" +
-                    "    <label for=\"name\">First Name: </label>\n" +
-                    "    <input type=\"text\" class=\"form-control\" id=\"name\" "
-                    + "name=\"name\" placeholder=\"First Name\">\n" +
-                    "  </div>\n" +
-                     "  <div class=\"form-group\">\n" +
-                    "    <label for=\"lname\">Last Name: </label>\n" +
-                    "    <input type=\"text\" class=\"form-control\" id=\"lname\" "
-                    + "name=\"lname\" placeholder=\"Last Name:\">\n" +
-                    "  </div>\n" +
-                    "  <div class=\"form-group\">\n" +
-                    "    <label for=\"username\">Username</label>\n" +
-                    "    <input type=\"text\" class=\"form-control\" id=\"username\" "
-                    + "name=\"username\" placeholder=\"Enter Username\">\n" +
-                    "  </div>\n" +
-                    "  <div class=\"form-group\">\n" +
-                    "    <label for=\"password\">Password</label>\n" +
-                    "    <input type=\"password\" class=\"form-control\" id=\"password\" "
-                    + "name=\"password\" placeholder=\"Password\">\n" +
-                    "  </div>\n" +
-                    "  <button type=\"submit\" class=\"btn btn-default\">"
-                    + "Submit</button>\n" +
-                    "</form></div>");
+            out.println("<br /><br />"+
+                    "<div class=\"panel panel-primary\"><h4>&nbsp; You've registered with SolutionBlender!"
+                    + " Please browse our items.</h4></div><br/>"+
+                    
+                "<ul>\n" +
+                "  <li><b>First Name</b>: "
+                + request.getParameter("name") + "\n" +
+                "  <li><b>Last Name</b>: "
+                + request.getParameter("lname") + "\n" +
+                "<li><b>Username:</b>: " 
+                + request.getParameter("username") + "\n" +
+                    "<li><b>Password:</b>: " 
+                + request.getParameter("password") +
+               
+                    
+                "</ul>\n" );
+            //out.println("<h1>Servlet RegistrationPreview at " + request.getContextPath() + "</h1>");
+           
             out.println(layout.containerClose());
             out.println(layout.footer());
         }
