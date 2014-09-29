@@ -38,15 +38,32 @@ public class Catalogue extends HttpServlet {
             out.println(layout.navBar());
             out.println(layout.containerOpen());
             out.println("<br /><br />"+
-                    "<div class=\"panel panel-primary\"><h4>&nbsp; You've logged into SolutionBlender!"
-                    + " Please browse our items.</h4></div><br/>"+
-                    
-                "<ul>\n" +
-                "  <li><b>First Name</b>: "
-                + request.getParameter("username") + "\n" +
-                "  <li><b>Last Name</b>: "
-                + request.getParameter("password") + "\n" +
-                "</ul>\n" );
+                    "  <h3 id=\"list-group-custom-content\">Catalogue</h3>\n" +
+"  <p>Welcome to SolutionBlender Shopping! Please select a category or browse all of our items.</p>\n" +
+"  <div class=\"bs-example\">\n" +
+"    <div class=\"list-group\">\n" +
+"      <a href=\"#\" class=\"list-group-item\">\n" +
+"        <h4 class=\"list-group-item-heading\">CPUs and Processors</h4>\n" +
+               " <div class=\"container\"><img src=\"./css/processor.jpg\" "
+                    + "alt=\"computer\" style=\"width:100px;height:100px\"></div>"   +   
+"        <p class=\"list-group-item-text\">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>\n" +
+"      </a>\n" +
+"      <a href=\"#\" class=\"list-group-item\">\n" +
+"        <h4 class=\"list-group-item-heading\">Computer Accessories</h4>\n" +
+                    " <div class=\"container\"><img src=\"./css/parts.jpg\" "
+                    + "alt=\"computer\" style=\"width:100px;height:100px\"></div>"   + 
+"        <p class=\"list-group-item-text\">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>\n" +
+"      </a>\n" +
+"      <a href=\"#\" class=\"list-group-item\">\n" +
+"        <h4 class=\"list-group-item-heading\">Printers, Scanners, and Supplies</h4>\n" +
+                  
+                    " <div class=\"container\"><img src=\"./css/printers.jpg\" "
+                    + "alt=\"computer\" style=\"width:100px;height:100px\"></div>"   + 
+"        <p class=\"list-group-item-text\">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>\n" +
+"      </a>\n" +
+"    </div>\n" +
+"  </div>");
+            
             
             out.println(layout.containerClose());
             out.println(layout.footer());

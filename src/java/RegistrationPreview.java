@@ -37,7 +37,9 @@ public class RegistrationPreview extends HttpServlet {
             out.println(layout.containerOpen());
             
             out.println("<br /><br />"+
-                    "<div class=\"panel panel-primary\"><h4>&nbsp; You've registered with SolutionBlender!"
+                    "<div class=\"panel panel-primary\"><h4>&nbsp; "
+                    + "Congratulations " + request.getParameter("name")
+                    + "! You've registered with SolutionBlender!"
                     + " Please browse our items.</h4></div><br/>"+
                     
                 "<ul>\n" +
