@@ -54,7 +54,7 @@ public class Login extends HttpServlet {
            }
           }
         try (PrintWriter out = response.getWriter()) {
-       Layout layout = new Layout();
+       Layout layout = new Layout(request);
             /* TODO output your page here. You may use following sample code. */
             out.println(layout.header("Login"));
             out.println(layout.navBar());

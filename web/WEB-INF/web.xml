@@ -16,6 +16,10 @@
         <servlet-name>RegistrationPreview</servlet-name>
         <servlet-class>RegistrationPreview</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>Logout</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Catalogue</servlet-name>
         <url-pattern>/welcome</url-pattern>
@@ -67,6 +71,10 @@
     <servlet-mapping>
         <servlet-name>Items</servlet-name>
         <url-pattern>/Items</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/Logout</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

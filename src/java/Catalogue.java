@@ -32,7 +32,7 @@ public class Catalogue extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            Layout layout = new Layout();
+            Layout layout = new Layout(request);
             /* TODO output your page here. You may use following sample code. */
             out.println(layout.header("Index"));
             out.println(layout.navBar());
