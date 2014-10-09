@@ -21,7 +21,7 @@
         <servlet-class>Logout</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>Catalogue</servlet-name>
+        <servlet-name>Index</servlet-name>
         <url-pattern>/welcome</url-pattern>
     </servlet-mapping>
     <servlet>
