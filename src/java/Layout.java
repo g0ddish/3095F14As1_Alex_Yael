@@ -20,7 +20,7 @@ public class Layout {
 "  <div class=\"container\">\n" +
 "    SolutionBlender Shopping (C) 2014\n" +
 "  </div>\n" +
-"</nav></body>></html>";
+"</nav></body></html>";
     }
     public String containerOpen(){
     return "<div class='container' style='margin-top:30px;'>";

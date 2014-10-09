@@ -33,8 +33,8 @@
         <servlet-class>Index</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Items</servlet-name>
-        <servlet-class>Items</servlet-class>
+        <servlet-name>ItemsShow</servlet-name>
+        <servlet-class>ItemsShow</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Catalogue</servlet-name>
@@ -65,8 +65,8 @@
         <url-pattern>/RegistrationPreview</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Items</servlet-name>
-        <url-pattern>/Items</url-pattern>
+        <servlet-name>ItemsShow</servlet-name>
+        <url-pattern>/ItemsShow</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
