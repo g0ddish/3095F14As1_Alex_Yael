@@ -5,7 +5,9 @@
  */
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,7 +18,17 @@ import javax.servlet.http.HttpServletResponse;
  * @author Not-A
  */
 public class Login extends HttpServlet {
+    
+    public Login(){
+    super();
+      User u1 = new User("Alex", "pass");
+        User u2 = new User("Yael", "pass");
+        Users.add(u1);
+        Users.add(u2);
+    
+    }
 
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -26,18 +38,31 @@ public class Login extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+   
+    
+    private static ArrayList<User> Users = new ArrayList<User>();
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        response.setContentType("text/html;charset=UTF-8");  
+      
+        for(User user: Users){
+           if(request.getParameter("password")!=null&&request.getParameter("username")!= null&&user.username.equalsIgnoreCase(request.getParameter("username")) && user.password.equalsIgnoreCase(request.getParameter("password"))){
+            Cookie loginCookie = new Cookie("username",user.username);
+            loginCookie.setMaxAge(120*60);
+            response.addCookie(loginCookie);
+            response.sendRedirect("welcome");
+           }
+          }
         try (PrintWriter out = response.getWriter()) {
-       Layout layout = new Layout();
+       Layout layout = new Layout(request);
             /* TODO output your page here. You may use following sample code. */
             out.println(layout.header("Login"));
             out.println(layout.navBar());
             out.println(layout.containerOpen());
+          
                    out.println("<br /><div class=\"container-fluid\"> <h4>Welcome to SolutionBlender Shopping.\n"
                     + "Please enter your e-mail and password to "
-                    + "login. <br /> If you do not have an account with us, please register <a href=\"./Registration\">here</a>.</h4></div>"+ "<div class=\"col-md-4\"><form method=\"post\" action=\"welcome\" role=\"form\">\n" +
+                    + "login. <br /> If you do not have an account with us, please register <a href=\"./Registration\">here</a>.</h4></div>"+ "<div class=\"col-md-4\"><form method=\"post\" action=\"Login\" role=\"form\">\n" +
                     "  <div class=\"form-group\">\n" + 
                     "    <label for=\"username\">Username</label>\n" +
                     "    <input type=\"text\" class=\"form-control\" id=\"username\" name=\"username\" placeholder=\"Enter Username\">\n" +
@@ -48,6 +73,7 @@ public class Login extends HttpServlet {
                     "  </div>\n" +
                     "  <button type=\"submit\" class=\"btn btn-default\">Submit</button>\n" +
                     "</form></div>");
+                            
             out.println(layout.containerClose());
             out.println(layout.footer());
         }
