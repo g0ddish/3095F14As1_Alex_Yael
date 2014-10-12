@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- *
+ *Login
  * @author Yael
  */
 public class Items extends HttpServlet {
@@ -39,12 +39,12 @@ public class Items extends HttpServlet {
                     "  <h3 id=\"list-group-custom-content\">Catalogue</h3>\n" +
 "  <p>Welcome to SolutionBlender Shopping! Please select a category or browse all of our items.</p>\n" +
     "  <table class=\"table table-striped\">\n" +
-    " <tr><td>yael</td><td></td><td>sprikut</td></tr>" +
-    "<tr><td>Yael</td><td>sprikut</td><td>sprikut</td></tr>" +
-    " <tr><td>yael</td><td>sprikut</td><td>sprikut</td></tr>" +
-    "<tr><td>Yael</td><td>sprikut</td><td>sprikut</td></tr>" +
-    " <tr><td>yael</td><td>sprikut</td><td>sprikut</td></tr>" +
-    "<tr><td>Yael</td><td>sprikut</td><td>sprikut</td></tr>" +
+    " <tr><td>Item #1</td><td>Yael</td><td>$39.99</td></tr>" +
+    "<tr><td>Item #2</td><td>sprikut</td><td>$139.99</td></tr>" +
+    " <tr><td>yael</td><td>sprikut</td><td>$39.99</td></tr>" +
+    "<tr><td>Yael</td><td>sprikut</td><td>$39.99</td></tr>" +
+    " <tr><td>yael</td><td>sprikut</td><td>$39.99</td></tr>" +
+    "<tr><td>Yael</td><td>sprikut</td><td>$39.99</td></tr>" +
     "<tr><td>Yael</td><td>sprikut</td><td>sprikut</td></tr>" +
     "<tr><td>Yael</td><td>sprikut</td><td>sprikut</td></tr>" +
     "<tr><td>Yael</td><td>sprikut</td><td>sprikut</td></tr>" +

@@ -42,17 +42,17 @@ public class Catalogue extends HttpServlet {
 "  <p>Welcome to SolutionBlender Shopping! Please select a category or browse all of our items.</p>\n" +
 "  <div class=\"bs-example\">\n" +
 "    <div class=\"list-group\">\n" +
-"      <a href=\"./ItemsShow\" class=\"list-group-item\">\n" +
+"      <a href=\"./Items\" class=\"list-group-item\">\n" +
 "        <h4 class=\"list-group-item-heading\">CPUs and Processors</h4>\n" +
                " <div class=\"container\"><img src=\"./css/processor.jpg\" "
                     + "alt=\"computer\" style=\"width:100px;height:100px\"></div>"   +   
 
-"      <a href=\"./ItemsShow\" class=\"list-group-item\">\n" +
+"      <a href=\"./Items\" class=\"list-group-item\">\n" +
 "        <h4 class=\"list-group-item-heading\">Computer Accessories</h4>\n" +
                     " <div class=\"container\"><img src=\"./css/parts.jpg\" "
                     + "alt=\"computer\" style=\"width:100px;height:100px\"></div>"   + 
 
-"      <a href=\"./ItemsShow\" class=\"list-group-item\">\n" +
+"      <a href=\"./Items\" class=\"list-group-item\">\n" +
 "        <h4 class=\"list-group-item-heading\">Printers, Scanners, and Supplies</h4>\n" +
                   
                     " <div class=\"container\"><img src=\"./css/printers.jpg\" "
