@@ -22,11 +22,13 @@ public class Login extends HttpServlet {
     public Login(){
     super();
       User u1 = new User("Alex", "pass");
-        User u2 = new User("Yael", "pass");
+      User u2 = new User("Yael", "pass");
         Users.add(u1);
         Users.add(u2);
     
     }
+    
+   
 
     
     /**

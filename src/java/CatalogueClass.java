@@ -9,11 +9,13 @@
  */
 public class CatalogueClass {
     private String itemID;
+    private String itemTitle;
     private String description;
     private double cost;
     
-    public CatalogueClass(String itemID, String description, double cost){
+    public CatalogueClass(String itemID, String itemTitle, String description, double cost){
         setItemID(itemID);
+        setItemTitle(itemTitle);
         setDescription(description);
         setCost(cost);
     
@@ -24,6 +26,14 @@ public class CatalogueClass {
     
     protected void setItemID(String itemID) {
     this.itemID = itemID;
+    }
+    
+    public String getItemTitle(){
+        return(itemTitle);
+    }
+    
+    protected void setItemTitle(String itemTitle){
+        this.itemTitle = itemTitle;
     }
     
     public String getDescription(){

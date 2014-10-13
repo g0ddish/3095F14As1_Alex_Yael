@@ -35,20 +35,21 @@ public class Items extends HttpServlet {
             out.println(layout.header("Index"));
             out.println(layout.navBar());
             out.println(layout.containerOpen());
+            
             out.println("<br /><br />"+
                     "  <h3 id=\"list-group-custom-content\">Catalogue</h3>\n" +
-"  <p>Welcome to SolutionBlender Shopping! Please select a category or browse all of our items.</p>\n" +
-    "  <table class=\"table table-striped\">\n" +
-    " <tr><td>Item #1</td><td>Yael</td><td>$39.99</td></tr>" +
-    "<tr><td>Item #2</td><td>sprikut</td><td>$139.99</td></tr>" +
-    " <tr><td>yael</td><td>sprikut</td><td>$39.99</td></tr>" +
-    "<tr><td>Yael</td><td>sprikut</td><td>$39.99</td></tr>" +
-    " <tr><td>yael</td><td>sprikut</td><td>$39.99</td></tr>" +
-    "<tr><td>Yael</td><td>sprikut</td><td>$39.99</td></tr>" +
-    "<tr><td>Yael</td><td>sprikut</td><td>sprikut</td></tr>" +
-    "<tr><td>Yael</td><td>sprikut</td><td>sprikut</td></tr>" +
-    "<tr><td>Yael</td><td>sprikut</td><td>sprikut</td></tr>" +
-    "</table>");
+                    "  <p>Welcome to SolutionBlender Shopping! Please select a category or browse all of our items.</p>\n" +
+                        "  <table class=\"table table-striped\">\n" +
+                        " <tr><td>Item #1</td><td>Yael</td><td>$39.99</td><td>Yael</td></tr>" +
+                        "<tr><td>Item #2</td><td>sprikut</td><td>$139.99</td><td>Yael</td></tr>" +
+                        " <tr><td>yael</td><td>sprikut</td><td>$39.99</td><td>Yael</td></tr>" +
+                        "<tr><td>Yael</td><td>sprikut</td><td>$39.99</td><td>Yael</td></tr>" +
+                        " <tr><td>yael</td><td>sprikut</td><td>$39.99</td><td>Yael</td></tr>" +
+                        "<tr><td>Yael</td><td>sprikut</td><td>$39.99</td><td>Yael</td></tr>" +
+                        "<tr><td>Yael</td><td>sprikut</td><td>sprikut</td><td>Yael</td></tr>" +
+                        "<tr><td>Yael</td><td>sprikut</td><td>sprikut</td><td>Yael</td></tr>" +
+                        "<tr><td>Yael</td><td>sprikut</td><td>sprikut</td><td>Yael</td></tr>" +
+                        "</table>");
             
             
             out.println(layout.containerClose());
