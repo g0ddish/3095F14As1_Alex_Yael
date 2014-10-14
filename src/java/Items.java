@@ -6,6 +6,7 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -35,20 +36,18 @@ public class Items extends HttpServlet {
             out.println(layout.header("Index"));
             out.println(layout.navBar());
             out.println(layout.containerOpen());
+            ArrayList<Product> prods = Index.Products;
             
             out.println("<br /><br />"+
                     "  <h3 id=\"list-group-custom-content\">Catalogue</h3>\n" +
                     "  <p>Welcome to SolutionBlender Shopping! Please select a category or browse all of our items.</p>\n" +
-                        "  <table class=\"table table-striped\">\n" +
-                        " <tr><td>Item #1</td><td>Yael</td><td>$39.99</td><td>Yael</td></tr>" +
-                        "<tr><td>Item #2</td><td>sprikut</td><td>$139.99</td><td>Yael</td></tr>" +
-                        " <tr><td>yael</td><td>sprikut</td><td>$39.99</td><td>Yael</td></tr>" +
-                        "<tr><td>Yael</td><td>sprikut</td><td>$39.99</td><td>Yael</td></tr>" +
-                        " <tr><td>yael</td><td>sprikut</td><td>$39.99</td><td>Yael</td></tr>" +
-                        "<tr><td>Yael</td><td>sprikut</td><td>$39.99</td><td>Yael</td></tr>" +
-                        "<tr><td>Yael</td><td>sprikut</td><td>sprikut</td><td>Yael</td></tr>" +
-                        "<tr><td>Yael</td><td>sprikut</td><td>sprikut</td><td>Yael</td></tr>" +
-                        "<tr><td>Yael</td><td>sprikut</td><td>sprikut</td><td>Yael</td></tr>" +
+                        "  <table class=\"table table-striped\">\n");
+            
+            for(Product product: prods){
+            out.println("<tr><td> "+ product.id +" </td><td> "+ product.name +" </td><td> "+ product.category.toString() +" </td><td> "+ product.price +" </td><td><a class='btn btn-primary' href='./Checkout?add="+ product.id +"'>Add to cart</a></td></tr>");
+            }
+            out.println(
+                    
                         "</table>");
             
             

@@ -6,6 +6,7 @@
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -27,6 +28,14 @@ public class ShoppingCart extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+            String userName = null;
+            Cookie[] cookies = request.getCookies();
+            if(cookies !=null){
+            for(Cookie cookie : cookies){
+                if(cookie.getName().equals("username")) userName = cookie.getValue();
+            }
+            }
+            if(userName == null) response.sendRedirect("Index");
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             Layout layout = new Layout(request);

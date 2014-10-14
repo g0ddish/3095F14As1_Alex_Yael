@@ -19,18 +19,8 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class Login extends HttpServlet {
     
-    public Login(){
-    super();
-      User u1 = new User("Alex", "pass");
-      User u2 = new User("Yael", "pass");
-        Users.add(u1);
-        Users.add(u2);
     
-    }
-    
-   
 
-    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -42,7 +32,7 @@ public class Login extends HttpServlet {
      */
    
     
-    private static ArrayList<User> Users = new ArrayList<User>();
+    private ArrayList<User> Users = RegistrationPreview.Users;
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");  

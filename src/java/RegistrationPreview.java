@@ -5,6 +5,7 @@
  */
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -25,13 +26,25 @@ public class RegistrationPreview extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    
+        public static ArrayList<User> Users = new Users();
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         Layout layout = new Layout(request);
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            
+              boolean dontadd = false;
+              for(User user: Users){
+              dontadd = false;
+              if(user.username.contains(request.getParameter("username"))){
+              dontadd = true;
+              }
+              }
+              if(!dontadd){
+                User test = new User(request.getParameter("username"), request.getParameter("password"));
+              Users.add(test);
+              }
             out.println(layout.header("Login"));
             out.println(layout.navBar());
             out.println(layout.containerOpen());
@@ -54,6 +67,7 @@ public class RegistrationPreview extends HttpServlet {
                
                     
                 "</ul>\n" );
+            
             //out.println("<h1>Servlet RegistrationPreview at " + request.getContextPath() + "</h1>");
            
             out.println(layout.containerClose());
